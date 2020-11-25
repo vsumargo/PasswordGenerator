@@ -1,0 +1,72 @@
+/* set background color, margin and font family for the body*/
+#body{
+    background-color:#e0fbfc;
+    margin:0;
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*  change the background color to dark blue
+    change text color
+    give box-shadow effect
+    and box radius */
+.container{
+    background-color:#3d5a80;
+    margin-top: 2.5rem;
+    width: 40rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px #284c7a;
+}
+
+/* make h1 center, underline and adjust spacing between characters */
+h1{
+   
+    text-decoration: underline;
+    text-align: center;
+    padding:1rem 0;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+/* set margin for all row class */
+.row {
+    margin: 0.5rem;
+}
+
+/* change text color, background color for generate password button */
+.btn{
+    background-color: #800d0d;
+    color:#ee6c4d;
+    padding: 1rem 5rem;
+    margin:1rem;
+    font-size: 1.3rem;
+}
+
+/* align the generate password button at the center of container */
+#btncol{
+    text-align: center;
+}
+
+/*  set the generated-password area
+    text color, background color
+    box size and text alignment*/
+#generated-password{
+    width: 200px;
+    background-color: white;
+    color: grey;
+    padding: 1rem;
+    margin:0 2rem;
+    text-align: center;
+    word-break: break-all;  
+    border: 2px dashed #ee6c4d;
+    border-radius: 1rem;
+}
+
+/* add hover effect at generated-password box area */
+#generated-password:hover{
+    box-shadow: 0 0 10px rgb(119, 160, 236);
+}

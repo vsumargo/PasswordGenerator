@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body id="body">
+    <main class="container">
+        <h1>Password Generator</h1>
+        <!-- Number of Characters slider and number input -->
+        <div class="row">
+            <div class="col-sm-6"><label for="range-of-characters">Number of Characters :</label></div>
+            <div class="col-sm-3"><input type="range" min="8" max="128" id="range-of-characters" value="12"></div>
+            <div class="col-sm-3"><input type="number" min="8" max="128" id="number-of-characters" value="12"></div>
+        </div>
+        <!-- checkbox to include Uppercase characters  -->
+        <div class="row">
+            <div class="col"><label for="include-uppercase">Include Uppercase :</label></div>
+            <div class="col"><input type="checkbox" id="include-uppercase"></div>    
+        </div>
+        <!-- checkbox to include Numerical characters -->
+        <div class="row">
+            <div class="col"><label for="include-numerics">Include Numerics :</label></div>
+            <div class="col"><input type="checkbox" id="include-numerics"></div>
+        </div>
+        <!-- checkbox to include Symbols characters-->
+        <div class="row">
+            <div class="col"><label for="include-symbols">Include Symbols :</label></div>
+            <div class="col"><input type="checkbox" id="include-symbols"></div>
+        </div>
+        <!-- button to generate password -->
+        <div class="row">
+            <div class="col" id="btncol"><button type="submit" class="btn" id="generate-password-btn">Generate Password</button></div>
+        </div>
+        <!-- the result of generated password is displayed here -->
+        <div class="row">
+            <div class="col" id="generated-password">Generated Password</div>
+        </div>
+    </main>
+
+    <!-- script used to run the code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
