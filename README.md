@@ -44,14 +44,14 @@ The following image shows the three pages appearance:
 
 1. Password Generator ScreenShoot
 
-![screenshot of Password Generator](./Assets/Images/screenshoot-about-page.png)
+![screenshot of Password Generator](Images/screenshoot-password-generator-page.png)
 
 #### Links
 The following links will take you to the source code in github repository and the deployed live page:
 
-* [Password Generator](https://vsumargo.github.io/Bootstrap-Responsive-Page/)
+* [Password Generator](https://vsumargo.github.io/PasswordGenerator/)
 
-* [GitHub Source Code](https://github.com/vsumargo/Bootstrap-Responsive-Page)
+* [GitHub Source Code](https://github.com/vsumargo/PasswordGenerator)
 
 ## Acknowledgements
 
