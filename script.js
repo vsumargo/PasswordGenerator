@@ -2,13 +2,13 @@
 let rangeOfCharacter = document.getElementById('range-of-characters');
 let numberOfCharacter = document.getElementById('number-of-characters');
 
-rangeOfCharacter.addEventListener('input', sync)
-numberOfCharacter.addEventListener('input', sync)
+rangeOfCharacter.addEventListener('input', sync);
+numberOfCharacter.addEventListener('input', sync);
 
 function sync(x){
-    let value = x.target.value
-    rangeOfCharacter.value = value
-    numberOfCharacter.value = value
+    let value = x.target.value;
+    rangeOfCharacter.value = value;
+    numberOfCharacter.value = value;
 }
 // 
 
@@ -26,7 +26,7 @@ function createArray(a,b){
     for (let i = a; i <= b ; i++){
         charactersArray.push(i);
     }
-    return charactersArray
+    return charactersArray;
 }
 
 let lowercaseArray = createArray(97,122);
@@ -51,13 +51,13 @@ function generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar){
         genPassword = genPassword.concat(symbolsArray);
     }
 
-    let passwordArray = []
+    let passwordArray = [];
     for (let i = 0; i < amountChar; i++){
         let length = genPassword.length;
-        let character = genPassword[Math.floor(Math.random() * length)]
-        passwordArray.push(String.fromCharCode(character))
+        let character = genPassword[Math.floor(Math.random() * length)];
+        passwordArray.push(String.fromCharCode(character));
     }
-    return passwordArray.join('')
+    return passwordArray.join('');
 }
 // 
 
@@ -65,18 +65,18 @@ function generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar){
 let generatedPassword = document.getElementById('generated-password');
 
 passwordBtn.addEventListener("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
     console.log(event);
 
     
-let amountChar = parseFloat(rangeOfCharacter.value)
-let uppercaseChar = includeUppercase.checked    
-let numericsChar = includeNumerics.checked
-let symbolsChar = includeSymbols.checked
+let amountChar = parseFloat(rangeOfCharacter.value);
+let uppercaseChar = includeUppercase.checked;    
+let numericsChar = includeNumerics.checked;
+let symbolsChar = includeSymbols.checked;
 
-    let password = generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar)
+    let password = generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar);
     generatedPassword.innerText = password;
-})
+});
 // 
 
 
