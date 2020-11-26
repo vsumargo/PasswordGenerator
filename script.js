@@ -13,11 +13,13 @@ function sync(x){
 // 
 
 // grouping each type of characters into its own category
+let includeLowercase = document.getElementById('include-lowercase');
 let includeUppercase = document.getElementById('include-uppercase');
 let includeNumerics = document.getElementById('include-numerics');
 let includeSymbols = document.getElementById('include-symbols');
 let passwordBtn = document.getElementById('generate-password-btn');
 // 
+
 
 // create array for lowercase, uppercase, numerics and symbols
 // using ASCII character codes
@@ -39,8 +41,12 @@ let symbolsArray = createArray(33,47).concat(
 // 
 
 // create function for generating random password
-function generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar){
-    let genPassword = lowercaseArray;
+function generatePassword(amountChar,lowercaseChar, uppercaseChar, numericsChar, symbolsChar){
+    let genPassword = [];
+    
+    if (lowercaseChar){
+        genPassword = genPassword.concat(lowercaseArray);
+    }
     if (uppercaseChar){
         genPassword = genPassword.concat(uppercaseArray);
     }
@@ -50,6 +56,7 @@ function generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar){
     if (symbolsChar){
         genPassword = genPassword.concat(symbolsArray);
     }
+
 
     let passwordArray = [];
     for (let i = 0; i < amountChar; i++){
@@ -63,19 +70,29 @@ function generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar){
 
 // create event when clicking the generate password button to return result
 let generatedPassword = document.getElementById('generated-password');
-
 passwordBtn.addEventListener("click", function(event){
     event.preventDefault();
     console.log(event);
+    
 
     
-let amountChar = parseFloat(rangeOfCharacter.value);
-let uppercaseChar = includeUppercase.checked;    
-let numericsChar = includeNumerics.checked;
-let symbolsChar = includeSymbols.checked;
+    let amountChar = parseFloat(rangeOfCharacter.value);
+    let lowercaseChar = includeLowercase.checked;
+    let uppercaseChar = includeUppercase.checked;    
+    let numericsChar = includeNumerics.checked;
+    let symbolsChar = includeSymbols.checked;
 
-    let password = generatePassword(amountChar,uppercaseChar, numericsChar, symbolsChar);
-    generatedPassword.innerText = password;
+    if (lowercaseChar !== true && 
+        uppercaseChar !== true &&
+        numericsChar !== true &&
+        symbolsChar !== true) {
+            alert('please CHOOSE ONE or more criteria for the password!');
+            generatedPassword.textContent = "Generated Password";
+    }
+    else{
+        let password = generatePassword(amountChar,lowercaseChar, uppercaseChar, numericsChar, symbolsChar);
+        generatedPassword.innerText = password;
+    }   
 });
 // 
 

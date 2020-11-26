@@ -16,11 +16,18 @@
 <body id="body">
     <main class="container">
         <h1>Password Generator</h1>
+        <h2>Please choose the following criteria for the password:</h2>
+       
         <!-- Number of Characters slider and number input -->
         <div class="row">
             <div class="col-sm-6"><label for="range-of-characters">Number of Characters :</label></div>
             <div class="col-sm-3"><input type="range" min="8" max="128" id="range-of-characters" value="12"></div>
             <div class="col-sm-3"><input type="number" min="8" max="128" id="number-of-characters" value="12"></div>
+        </div>
+        <!-- checkbox to include Lowercase characters -->
+        <div class="row">
+            <div class="col"><label for="include-lowercase">Include Lowercase :</label></div>
+            <div class="col"><input type="checkbox" id="include-lowercase"></div>
         </div>
         <!-- checkbox to include Uppercase characters  -->
         <div class="row">
